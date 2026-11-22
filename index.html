@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Segurança & Hardening (CSP, Referrer, XSS) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; connect-src 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- SEO Técnico & Indexação Robótica -->
+  <title>NEXO FORMS | Design, Criação & Inspiração em Resina Epóxi — São Paulo</title>
+  <meta name="description" content="NEXO FORMS - Peças artesanais e exclusivas em resina epóxi: bandejas, porta-copos, chaveiros, eternizações e decoração personalizada no Jardim Santa Fé, Morro Doce, São Paulo - SP.">
+  <meta name="keywords" content="NEXO FORMS, Nexo Form, produtos em resina, resina epóxi São Paulo, arte em resina, Jardim Santa Fé, Morro Doce, bandejas de resina, eternização em resina, presentes personalizados">
+  <meta name="author" content="NEXO FORMS">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://nexoforms.com.br/">
+  <meta name="theme-color" content="#4A3222">
+
+  <!-- Open Graph / WhatsApp / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="NEXO FORMS">
+  <meta property="og:title" content="NEXO FORMS | Design • Criação • Inspiração">
+  <meta property="og:description" content="Catálogo exclusivo de peças artesanais em resina epóxi com acabamento de alto brilho. Atendimento direto via WhatsApp.">
+  <meta property="og:url" content="https://nexoforms.com.br/">
+
+  <!-- Tipografia Elegante -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Dados Estruturados JSON-LD (Schema.org: Store + LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "NEXO FORMS",
+    "alternateName": "Nexo Form",
+    "slogan": "Design • Criação • Inspiração",
+    "description": "Ateliê e loja de produtos artesanais e personalizados em resina epóxi.",
+    "telephone": "+55-11-94290-9480",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jardim Santa Fé, Morro Doce",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "São Paulo"
+    },
+    "sameAs": [
+      "https://wa.me/5511942909480"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM - PALETA EXTRAÍDA DA IDENTIDADE VISUAL NEXO FORMS
+       ========================================================================== */
+    :root {
+      --bg-champagne: #F4ECE2;
+      --bg-cream: #EAE0D3;
+      --bg-card: #FAF6F1;
+      --gold-light: #E2BE9B;
+      --gold-primary: #C59369;
+      --gold-dark: #9F6B43;
+      --brown-deep: #4A3222;
+      --brown-muted: #6E523E;
+      --whatsapp-green: #25D366;
+      --whatsapp-dark: #1DA851;
+      --danger: #B9382C;
+      --border-subtle: rgba(74, 50, 34, 0.14);
+      --shadow-soft: 0 10px 30px rgba(74, 50, 34, 0.08);
+      --shadow-hover: 0 16px 36px rgba(159, 107, 67, 0.18);
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --transition: all 0.28s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(160deg, var(--bg-champagne) 0%, var(--bg-cream) 100%);
+      color: var(--brown-deep);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ==========================================================================
+       HEADER & NAVEGAÇÃO
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(244, 236, 226, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--brown-deep);
+    }
+
+    .brand-logo-svg {
+      width: 58px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.32rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      line-height: 1.1;
+      color: var(--brown-deep);
+    }
+
+    .brand-title span {
+      font-weight: 300;
+    }
+
+    .brand-subtitle {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown-muted);
+      margin-top: 3px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.68rem 1.25rem;
+      border-radius: 50px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-dark) 100%);
+      color: #FFF;
+      box-shadow: 0 4px 14px rgba(159, 107, 67, 0.28);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(159, 107, 67, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--brown-deep);
+      color: var(--brown-deep);
+    }
+
+    .btn-outline:hover {
+      background: var(--brown-deep);
+      color: var(--bg-champagne);
+    }
+
+    /* ==========================================================================
+       HERO SECTION (IDENTIDADE OFICIAL NEXO FORMS)
+       ========================================================================== */
+    .hero {
+      padding: 3.2rem 1.5rem 2.4rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-emblem {
+      max-width: 280px;
+      margin: 0 auto 0.85rem;
+      filter: drop-shadow(0 8px 18px rgba(74, 50, 34, 0.14));
+    }
+
+    .hero-emblem img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: var(--brown-deep);
+      margin-bottom: 0.35rem;
+    }
+
+    .hero h1 span {
+      font-weight: 300;
+    }
+
+    .hero-tagline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--brown-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-tagline::before,
+    .hero-tagline::after {
+      content: "";
+      height: 1px;
+      width: 44px;
+      background: var(--gold-primary);
+    }
+
+    .hero p {
+      font-size: 1.03rem;
+      color: var(--brown-muted);
+      max-width: 640px;
+      margin: 0 auto 2rem;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       BARRA DE BUSCA INTELIGENTE & FILTROS POR CATEGORIA
+       ========================================================================== */
+    .catalog-controls {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      padding: 0 1.5rem;
+    }
+
+    .search-filter-bar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .search-input-group {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input-group svg {
+      position: absolute;
+      left: 1rem;
+      width: 20px;
+      height: 20px;
+      color: var(--gold-dark);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.85rem 1rem 0.85rem 2.85rem;
+      border-radius: 50px;
+      border: 1px solid var(--border-subtle);
+      background: #FFF;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--brown-deep);
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .search-input:focus {
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 3px rgba(197, 147, 105, 0.2);
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .pill {
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-champagne);
+      color: var(--brown-deep);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .pill:hover,
+    .pill.active {
+      background: var(--brown-deep);
+      color: #FFF;
+      border-color: var(--brown-deep);
+    }
+
+    .results-counter {
+      font-size: 0.82rem;
+      color: var(--brown-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       GRID DE PRODUTOS
+       ========================================================================== */
+    main {
+      flex: 1;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--gold-primary);
+    }
+
+    .product-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--bg-cream);
+      overflow: hidden;
+    }
+
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .product-media img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 0.85rem;
+      left: 0.85rem;
+      background: rgba(74, 50, 34, 0.88);
+      color: var(--bg-champagne);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 50px;
+      backdrop-filter: blur(4px);
+    }
+
+    .product-body {
+      padding: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      margin-bottom: 0.45rem;
+    }
+
+    .product-desc {
+      font-size: 0.88rem;
+      color: var(--brown-muted);
+      margin-bottom: 1.15rem;
+      flex: 1;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .product-price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brown-muted);
+    }
+
+    .price-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+    }
+
+    .btn-zap-card {
+      background: var(--whatsapp-green);
+      color: #FFF;
+      padding: 0.6rem 1rem;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .btn-zap-card:hover {
+      background: var(--whatsapp-dark);
+      transform: scale(1.03);
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3.5rem 1rem;
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--gold-primary);
+    }
+
+    /* ==========================================================================
+       SEÇÃO LOCALIZAÇÃO & CONTATO DIRETO
+       ========================================================================== */
+    .location-section {
+      max-width: 1200px;
+      margin: 0 auto 3.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .location-card {
+      background: var(--brown-deep);
+      color: var(--bg-champagne);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .location-card h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.55rem;
+      color: var(--gold-light);
+      margin-bottom: 0.6rem;
+    }
+
+    .location-info-list {
+      list-style: none;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+    }
+
+    .location-info-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    /* ==========================================================================
+       BOTÃO FLUTUANTE WHATSAPP
+       ========================================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 95;
+      background: var(--whatsapp-green);
+      color: #FFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.42);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      background: var(--whatsapp-dark);
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: #3A2619;
+      color: rgba(244, 236, 226, 0.82);
+      padding: 2rem 1.5rem;
+      font-size: 0.85rem;
+      border-top: 2px solid var(--gold-primary);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .admin-trigger-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(226, 190, 155, 0.3);
+      color: var(--gold-light);
+      padding: 0.4rem 0.9rem;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .admin-trigger-btn:hover {
+      background: var(--gold-primary);
+      color: #FFF;
+    }
+
+    /* ==========================================================================
+       MODAL ADMIN (GESTÃO DE PRODUTOS, PREÇOS E FOTOS)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      background: rgba(35, 22, 14, 0.72);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .admin-modal {
+      background: var(--bg-card);
+      width: 100%;
+      max-width: 820px;
+      max-height: 90vh;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gold-primary);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .admin-header {
+      background: var(--brown-deep);
+      color: var(--bg-champagne);
+      padding: 1.15rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .admin-header h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--gold-light);
+    }
+
+    .close-modal {
+      background: none;
+      border: none;
+      color: var(--bg-champagne);
+      font-size: 1.6rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .admin-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+    }
+
+    .form-control {
+      padding: 0.7rem 0.9rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-subtle);
+      background: #FFF;
+      font-family: inherit;
+      font-size: 0.9rem;
+      color: var(--brown-deep);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    .admin-item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .admin-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      background: #FFF;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .admin-item-info {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .admin-item-thumb {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: var(--bg-cream);
+    }
+
+    .admin-row-actions {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .btn-sm {
+      padding: 0.38rem 0.75rem;
+      font-size: 0.76rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn-edit {
+      background: var(--gold-light);
+      color: var(--brown-deep);
+    }
+
+    .btn-delete {
+      background: var(--danger);
+      color: #FFF;
+    }
+
+    .admin-tools-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    @media (max-width: 768px) {
+      .location-card {
+        grid-template-columns: 1fr;
+      }
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-actions .btn-outline {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER
+       ======================================================================== -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand-link" aria-label="NEXO FORMS Início">
+        <!-- Ícone Vetorial fiel ao símbolo da fita fluida dourada e esfera -->
+        <svg class="brand-logo-svg" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="goldRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E8C6A2"/>
+              <stop offset="45%" stop-color="#C59369"/>
+              <stop offset="100%" stop-color="#8A5630"/>
+            </linearGradient>
+            <radialGradient id="goldSphere" cx="35%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#FFF3E6"/>
+              <stop offset="45%" stop-color="#C59369"/>
+              <stop offset="100%" stop-color="#6E4222"/>
+            </radialGradient>
+          </defs>
+          <path d="M12 76C38 76 48 26 74 26C98 26 104 78 128 78C144 78 152 66 158 58C146 68 136 72 126 70C106 66 96 18 72 18C46 18 36 68 12 76Z" fill="url(#goldRibbon)"/>
+          <path d="M98 48C112 24 134 10 166 12C142 18 124 34 108 60L98 48Z" fill="url(#goldRibbon)"/>
+          <circle cx="146" cy="52" r="13" fill="url(#goldSphere)"/>
+        </svg>
+        <div class="brand-text-wrap">
+          <span class="brand-title">NEXO <span>FORMS</span></span>
+          <span class="brand-subtitle">Design • Criação • Inspiração</span>
+        </div>
+      </a>
+
+      <nav class="nav-actions" aria-label="Navegação Principal">
+        <a href="#catalogo" class="btn btn-outline">Catálogo</a>
+        <a href="#localizacao" class="btn btn-outline">Ateliê</a>
+        <a href="https://wa.me/5511942909480?text=Ol%C3%A1%20NEXO%20FORMS!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20pe%C3%A7a%20em%20resina." target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+          Chamar no ZAP
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO
+       ======================================================================== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-emblem">
+      <!-- Carrega logo-nexo-forms.png se estiver na pasta, ou exibe o emblema vetorial fiel -->
+      <img src="logo-nexo-forms.png" alt="Logo Oficial NEXO FORMS" onerror="this.style.display='none'; document.getElementById('fallbackHeroSvg').style.display='block';">
+      <svg id="fallbackHeroSvg" style="display:none; width:100%; height:auto;" viewBox="0 0 220 110" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="heroRibbonGrad" x1="10" y1="80" x2="200" y2="20" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#9F6B43"/>
+            <stop offset="35%" stop-color="#E7C5A3"/>
+            <stop offset="70%" stop-color="#C59369"/>
+            <stop offset="100%" stop-color="#7D4C29"/>
+          </linearGradient>
+          <radialGradient id="heroSphereGrad" cx="32%" cy="30%" r="68%">
+            <stop offset="0%" stop-color="#FFF7EE"/>
+            <stop offset="40%" stop-color="#D1A178"/>
+            <stop offset="85%" stop-color="#8C5832"/>
+            <stop offset="100%" stop-color="#5E381D"/>
+          </radialGradient>
+        </defs>
+        <path d="M16 88C48 86 60 28 92 28C122 28 130 88 160 88C178 88 188 76 196 66C182 78 170 82 158 80C132 75 120 18 89 18C56 18 44 78 16 88Z" fill="url(#heroRibbonGrad)"/>
+        <path d="M122 54C138 26 164 10 204 12C175 19 154 38 134 68L122 54Z" fill="url(#heroRibbonGrad)"/>
+        <circle cx="180" cy="60" r="15" fill="url(#heroSphereGrad)"/>
+      </svg>
+    </div>
+
+    <h1 id="hero-heading">NEXO <span>FORMS</span></h1>
+    <div class="hero-tagline">Design • Criação • Inspiração</div>
+    <p>
+      Peças autorais em resina epóxi com acabamento cristalino, pigmentação perolada e detalhes metálicos sob medida. Escolha no catálogo abaixo ou peça sua criação exclusiva direto pelo WhatsApp.
+    </p>
+  </section>
+
+  <!-- ========================================================================
+       BUSCA INSTANTÂNEA & FILTROS
+       ======================================================================== -->
+  <section id="catalogo" class="catalog-controls" aria-label="Busca e Filtros do Catálogo">
+    <div class="search-filter-bar">
+      <div class="search-input-group">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="Buscar peça em resina (ex: bandeja, porta-copos, chaveiro, joia, relógio)..."
+          aria-label="Buscar produtos em resina"
+        >
+      </div>
+
+      <div class="filter-pills">
+        <div class="category-list" id="categoryButtons" role="tablist">
+          <button type="button" class="pill active" data-category="Todos">Todos</button>
+          <button type="button" class="pill" data-category="Decoração">Decoração</button>
+          <button type="button" class="pill" data-category="Mesa Posta">Mesa Posta</button>
+          <button type="button" class="pill" data-category="Acessórios">Acessórios</button>
+          <button type="button" class="pill" data-category="Eternização">Eternização</button>
+        </div>
+        <span class="results-counter" id="resultsCounter">Carregando peças...</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VITRINE DE PRODUTOS (RENDERIZADA DINAMICAMENTE)
+       ======================================================================== -->
+  <main>
+    <div class="products-grid" id="productsGrid" aria-live="polite"></div>
+  </main>
+
+  <!-- ========================================================================
+       LOCALIZAÇÃO & ATENDIMENTO
+       ======================================================================== -->
+  <section id="localizacao" class="location-section" aria-labelledby="loc-title">
+    <div class="location-card">
+      <div>
+        <h2 id="loc-title">Ateliê NEXO FORMS — São Paulo</h2>
+        <p>Produção artesanal com retirada agendada ou envio seguro para todo o Brasil. Encomendas personalizadas em cores champagne, dourado, madrepérola e pigmentos especiais.</p>
+        <ul class="location-info-list">
+          <li><strong>Endereço:</strong> Jardim Santa Fé, Morro Doce — São Paulo / SP</li>
+          <li><strong>WhatsApp Direto:</strong> (11) 94290-9480</li>
+          <li><strong>Atendimento:</strong> Sob encomenda e pronta-entrega</li>
+        </ul>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:0.85rem;">
+        <a href="https://wa.me/5511942909480?text=Ol%C3%A1%20NEXO%20FORMS!%20Vi%20o%20site%20e%20quero%20fazer%20uma%20encomenda%20personalizada." target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="padding:1rem 1.5rem; font-size:0.95rem;">
+          Falar Agora no WhatsApp (11) 94290-9480
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Jardim+Santa+Fe+Morro+Doce+Sao+Paulo+SP" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color:var(--gold-light); color:var(--gold-light);">
+          Ver Região no Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER + ACESSO ADMIN
+       ======================================================================== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>NEXO FORMS</strong> • Design, Criação & Inspiração em Resina — Jardim Santa Fé, Morro Doce, São Paulo - SP.
+      </div>
+      <button type="button" id="openAdminBtn" class="admin-trigger-btn" title="Gerenciar Catálogo">
+        Área Admin
+      </button>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a href="https://wa.me/5511942909480?text=Ol%C3%A1%20NEXO%20FORMS!%20Gostaria%20de%20informações%20sobre%20os%20produtos%20em%20resina." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chamar NEXO FORMS no WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.475 1.331 4.988L2 22l5.188-1.361a9.927 9.927 0 0 0 4.843 1.258h.004c5.515 0 9.968-4.453 9.968-9.969 0-2.663-1.037-5.167-2.92-7.05A9.903 9.903 0 0 0 12.031 2zm5.82 14.267c-.246.693-1.432 1.325-1.988 1.409-.513.077-1.162.11-1.876-.117-.434-.138-.991-.322-1.703-.63-2.996-1.294-4.953-4.311-5.103-4.511-.15-.2-1.219-1.622-1.219-3.094 0-1.472.771-2.196 1.045-2.496.274-.3.598-.375.797-.375.199 0 .398.002.573.01.184.009.43-.07.673.513.249.6.847 2.071.922 2.221.075.15.125.325.025.525-.1.2-.15.325-.299.5-.15.175-.314.391-.449.525-.15.149-.306.311-.131.611.174.3.775 1.279 1.664 2.071 1.144 1.02 2.108 1.336 2.408 1.486.299.15.474.125.648-.075.175-.2.748-.874.947-1.174.2-.3.399-.25.673-.15.274.1 1.744.823 2.043.973.299.15.498.225.573.35.075.125.075.724-.171 1.417z"/>
+    </svg>
+  </a>
+
+  <!-- ========================================================================
+       MODAL PAINEL ADMINISTRATIVO (CRUD COMPLETO + UPLOAD DE FOTO)
+       ======================================================================== -->
+  <div class="modal-backdrop" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminModalTitle">
+    <div class="admin-modal">
+      <div class="admin-header">
+        <h3 id="adminModalTitle">Painel Admin NEXO FORMS — Gerenciar Produtos</h3>
+        <button type="button" class="close-modal" id="closeAdminBtn" aria-label="Fechar Painel">&times;</button>
+      </div>
+
+      <div class="admin-body">
+        <!-- Formulário de Cadastro / Edição -->
+        <form id="productForm">
+          <input type="hidden" id="editProductId">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="prodName">Nome do Produto *</label>
+              <input type="text" id="prodName" class="form-control" required placeholder="Ex: Bandeja Orgânica Dourada">
+            </div>
+
+            <div class="form-group">
+              <label for="prodCategory">Categoria *</label>
+              <select id="prodCategory" class="form-control" required>
+                <option value="Decoração">Decoração</option>
+                <option value="Mesa Posta">Mesa Posta</option>
+                <option value="Acessórios">Acessórios</option>
+                <option value="Eternização">Eternização</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="prodPrice">Preço (R$) *</label>
+              <input type="number" id="prodPrice" class="form-control" step="0.01" min="0" required placeholder="Ex: 149.90">
+            </div>
+
+            <div class="form-group">
+              <label for="prodPhotoFile">Foto do Produto (Celular/PC)</label>
+              <input type="file" id="prodPhotoFile" class="form-control" accept="image/*">
+            </div>
+
+            <div class="form-group full">
+              <label for="prodDesc">Descrição / Detalhes da Peça *</label>
+              <textarea id="prodDesc" class="form-control" rows="2" required placeholder="Ex: Resina epóxi cristal com pigmento champagne e borda metalizada em folha de ouro."></textarea>
+            </div>
+          </div>
+
+          <div style="margin-top:1rem; display:flex; gap:0.65rem; flex-wrap:wrap;">
+            <button type="submit" class="btn btn-gold" id="saveProdBtn">Salvar Produto no Catálogo</button>
+            <button type="button" class="btn btn-outline" id="cancelEditBtn" style="display:none;">Cancelar Edição</button>
+          </div>
+        </form>
+
+        <!-- Lista de Produtos Cadastrados -->
+        <div>
+          <h4 style="margin-bottom:0.65rem; font-size:0.95rem;">Produtos Ativos no Site (<span id="adminCount">0</span>)</h4>
+          <div class="admin-item-list" id="adminProductList"></div>
+        </div>
+
+        <!-- Backup / Restauração -->
+        <div class="admin-tools-bar">
+          <button type="button" class="btn-sm btn-edit" id="exportJsonBtn">Exportar Catálogo (Backup JSON)</button>
+          <button type="button" class="btn-sm btn-edit" id="resetDemoBtn">Restaurar Itens Modelo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       JAVASCRIPT MODULAR (SEGURANÇA XSS, BUSCA, LOCALSTORAGE & WHATSAPP)
+       ======================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      const STORAGE_KEY = 'nexo_forms_catalog_v1';
+      const ADMIN_PASS = 'nexo2026';
+      const WHATSAPP_PHONE = '5511942909480';
+
+      // Gera ilustrações SVG elegantes em Base64 para os produtos de demonstração
+      function createArtPreview(title, bg1, bg2, accent) {
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+          <defs>
+            <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="${bg1}"/>
+              <stop offset="100%" stop-color="${bg2}"/>
+            </linearGradient>
+          </defs>
+          <rect width="600" height="450" fill="url(#g)"/>
+          <circle cx="300" cy="210" r="115" fill="none" stroke="${accent}" stroke-width="5" opacity="0.85"/>
+          <path d="M180 245 Q300 140 420 230" fill="none" stroke="#FFF8F0" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+          <circle cx="375" cy="175" r="16" fill="${accent}"/>
+          <text x="300" y="375" font-family="Georgia, serif" font-size="22" fill="#4A3222" text-anchor="middle" letter-spacing="3">${title}</text>
+        </svg>`;
+        return 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+      }
+
+      const DEFAULT_PRODUCTS = [
+        {
+          id: 'prod-1',
+          name: 'Bandeja Orgânica Champagne & Ouro',
+          category: 'Decoração',
+          price: 169.90,
+          description: 'Bandeja artesanal em resina epóxi perolada tom champagne com acabamento em folha de ouro nas bordas. Ideal para lavabos e aparadores.',
+          image: createArtPreview('BANDEJA CHAMPAGNE', '#EFE3D4', '#D7BFA6', '#9F6B43')
+        },
+        {
+          id: 'prod-2',
+          name: 'Kit 4 Porta-Copos Madrepérola',
+          category: 'Mesa Posta',
+          price: 94.00,
+          description: 'Conjunto com 4 porta-copos em resina cristal e pigmento bronze perolado com proteção térmica e brilho espelhado.',
+          image: createArtPreview('PORTA-COPOS BRONZE', '#E8DAC8', '#C9A989', '#7D4C29')
+        },
+        {
+          id: 'prod-3',
+          name: 'Chaveiro Inicial Personalizado',
+          category: 'Acessórios',
+          price: 35.00,
+          description: 'Letra em resina de alta transparência com folhas metálicas douradas, tassel de seda e argola reforçada.',
+          image: createArtPreview('CHAVEIRO INICIAL', '#F5ECE2', '#DFC6AD', '#B07B50')
+        },
+        {
+          id: 'prod-4',
+          name: 'Eternização Floral em Bloco Cristal',
+          category: 'Eternização',
+          price: 240.00,
+          description: 'Preservação permanente de flores naturais ou lembranças especiais em bloco geométrico de resina UV anti-amarelamento.',
+          image: createArtPreview('ETERNIZAÇÃO CRISTAL', '#EAE0D3', '#C5A282', '#6E4222')
+        },
+        {
+          id: 'prod-5',
+          name: 'Relógio de Parede Geodo Dourado',
+          category: 'Decoração',
+          price: 219.00,
+          description: 'Relógio decorativo estilo pedra ágata com cristais, pigmentos terrosos e ponteiros metálicos silenciosos.',
+          image: createArtPreview('RELÓGIO GEODO', '#F2E7DA', '#CFAF8E', '#8A5630')
+        },
+        {
+          id: 'prod-6',
+          name: 'Petisqueira Dupla Marrom Expresso',
+          category: 'Mesa Posta',
+          price: 138.50,
+          description: 'Peça funcional em dois níveis com haste metálica dourada e resina marmorizada de fácil higienização.',
+          image: createArtPreview('PETISQUEIRA DUPLA', '#E7D8C7', '#B9926E', '#4A3222')
+        }
+      ];
+
+      let products = loadProducts();
+      let currentCategory = 'Todos';
+      let currentSearch = '';
+      let isAuthenticated = false;
+
+      // Sanitização rigorosa contra XSS ao renderizar textos inseridos no Admin
+      function escapeHTML(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      function formatCurrency(val) {
+        return Number(val).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+      }
+
+      function loadProducts() {
+        try {
+          const saved = localStorage.getItem(STORAGE_KEY);
+          if (saved) {
+            const parsed = JSON.parse(saved);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+          }
+        } catch (e) {
+          console.warn('Erro ao ler catálogo local:', e);
+        }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_PRODUCTS));
+        return [...DEFAULT_PRODUCTS];
+      }
+
+      function saveProducts() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+        } catch (e) {
+          alert('Limite de armazenamento do navegador atingido. Tente usar imagens mais leves.');
+        }
+      }
+
+      // Renderiza a vitrine pública
+      function renderCatalog() {
+        const grid = document.getElementById('productsGrid');
+        const counter = document.getElementById('resultsCounter');
+
+        const filtered = products.filter(item => {
+          const matchCat = currentCategory === 'Todos' || item.category === currentCategory;
+          const term = currentSearch.trim().toLowerCase();
+          const matchText = !term ||
+            item.name.toLowerCase().includes(term) ||
+            item.description.toLowerCase().includes(term) ||
+            item.category.toLowerCase().includes(term);
+          return matchCat && matchText;
+        });
+
+        counter.textContent = `${filtered.length} ${filtered.length === 1 ? 'peça encontrada' : 'peças encontradas'}`;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = `
+            <div class="empty-state">
+              <h3>Nenhuma peça encontrada com esse filtro</h3>
+              <p style="margin-top:0.5rem; color:var(--brown-muted);">Tente buscar outro termo ou fale conosco no WhatsApp para encomendar sob medida.</p>
+            </div>`;
+          return;
+        }
+
+        grid.innerHTML = filtered.map(item => {
+          const zapMsg = encodeURIComponent(
+            `Olá NEXO FORMS! Tenho interesse na peça: *${item.name}* (${formatCurrency(item.price)}). Podemos conversar?`
+          );
+          return `
+            <article class="product-card">
+              <div class="product-media">
+                <span class="product-badge">${escapeHTML(item.category)}</span>
+                <img src="${item.image}" alt="${escapeHTML(item.name)}" loading="lazy">
+              </div>
+              <div class="product-body">
+                <h2 class="product-title">${escapeHTML(item.name)}</h2>
+                <p class="product-desc">${escapeHTML(item.description)}</p>
+                <div class="product-footer">
+                  <div class="product-price">
+                    <span class="price-label">Valor</span>
+                    <span class="price-value">${formatCurrency(item.price)}</span>
+                  </div>
+                  <a href="https://wa.me/${WHATSAPP_PHONE}?text=${zapMsg}" target="_blank" rel="noopener noreferrer" class="btn-zap-card">
+                    Pedir no ZAP
+                  </a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      // Renderiza lista interna do Admin
+      function renderAdminList() {
+        const listEl = document.getElementById('adminProductList');
+        const countEl = document.getElementById('adminCount');
+        countEl.textContent = products.length;
+
+        listEl.innerHTML = products.map(item => `
+          <div class="admin-item-row">
+            <div class="admin-item-info">
+              <img src="${item.image}" alt="" class="admin-item-thumb">
+              <div>
+                <strong style="display:block; font-size:0.9rem;">${escapeHTML(item.name)}</strong>
+                <span style="font-size:0.8rem; color:var(--brown-muted);">${escapeHTML(item.category)} • ${formatCurrency(item.price)}</span>
+              </div>
+            </div>
+            <div class="admin-row-actions">
+              <button type="button" class="btn-sm btn-edit" data-action="edit" data-id="${item.id}">Editar</button>
+              <button type="button" class="btn-sm btn-delete" data-action="delete" data-id="${item.id}">Excluir</button>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Compressão automática de foto enviada pelo celular/PC antes de salvar
+      function compressImageFile(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = e => {
+            const img = new Image();
+            img.onload = () => {
+              const canvas = document.createElement('canvas');
+              const MAX_WIDTH = 800;
+              const scale = Math.min(1, MAX_WIDTH / img.width);
+              canvas.width = img.width * scale;
+              canvas.height = img.height * scale;
+              const ctx = canvas.getContext('2d');
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+              resolve(canvas.toDataURL('image/jpeg', 0.82));
+            };
+            img.onerror = reject;
+            img.src = e.target.result;
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // Eventos de Busca e Filtro
+      document.getElementById('searchInput').addEventListener('input', e => {
+        currentSearch = e.target.value;
+        renderCatalog();
+      });
+
+      document.getElementById('categoryButtons').addEventListener('click', e => {
+        if (!e.target.classList.contains('pill')) return;
+        document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+        e.target.classList.add('active');
+        currentCategory = e.target.dataset.category;
+        renderCatalog();
+      });
+
+      // Controle de Acesso ao Painel Admin
+      const adminModal = document.getElementById('adminModal');
+
+      function openAdmin() {
+        if (!isAuthenticated) {
+          const pass = prompt('Digite a senha administrativa da NEXO FORMS:');
+          if (pass !== ADMIN_PASS) {
+            if (pass !== null) alert('Senha incorreta.');
+            return;
+          }
+          isAuthenticated = true;
+        }
+        renderAdminList();
+        adminModal.classList.add('open');
+      }
+
+      document.getElementById('openAdminBtn').addEventListener('click', openAdmin);
+      document.getElementById('closeAdminBtn').addEventListener('click', () => {
+        adminModal.classList.remove('open');
+        resetForm();
+      });
+
+      // Atalho de teclado Ctrl + Shift + A para abrir o Admin
+      document.addEventListener('keydown', e => {
+        if (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === 'A') {
+          e.preventDefault();
+          openAdmin();
+        }
+      });
+
+      // Salvar (Criar ou Editar) Produto
+      const productForm = document.getElementById('productForm');
+      const editIdInput = document.getElementById('editProductId');
+      const cancelEditBtn = document.getElementById('cancelEditBtn');
+
+      function resetForm() {
+        productForm.reset();
+        editIdInput.value = '';
+        cancelEditBtn.style.display = 'none';
+        document.getElementById('saveProdBtn').textContent = 'Salvar Produto no Catálogo';
+      }
+
+      cancelEditBtn.addEventListener('click', resetForm);
+
+      productForm.addEventListener('submit', async e => {
+        e.preventDefault();
+        const id = editIdInput.value;
+        const name = document.getElementById('prodName').value.trim();
+        const category = document.getElementById('prodCategory').value;
+        const price = parseFloat(document.getElementById('prodPrice').value);
+        const description = document.getElementById('prodDesc').value.trim();
+        const fileInput = document.getElementById('prodPhotoFile');
+
+        let imageData = null;
+        if (fileInput.files && fileInput.files[0]) {
+          imageData = await compressImageFile(fileInput.files[0]);
+        }
+
+        if (id) {
+          const index = products.findIndex(p => p.id === id);
+          if (index !== -1) {
+            products[index] = {
+              ...products[index],
+              name,
+              category,
+              price,
+              description,
+              image: imageData || products[index].image
+            };
+          }
+        } else {
+          products.unshift({
+            id: 'prod-' + Date.now(),
+            name,
+            category,
+            price,
+            description,
+            image: imageData || createArtPreview(name.toUpperCase().slice(0, 18), '#EFE3D4', '#C9A989', '#9F6B43')
+          });
+        }
+
+        saveProducts();
+        renderCatalog();
+        renderAdminList();
+        resetForm();
+      });
+
+      // Editar / Excluir item na lista do Admin
+      document.getElementById('adminProductList').addEventListener('click', e => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const { action, id } = btn.dataset;
+
+        if (action === 'delete') {
+          if (confirm('Deseja realmente remover este produto do catálogo?')) {
+            products = products.filter(p => p.id !== id);
+            saveProducts();
+            renderCatalog();
+            renderAdminList();
+          }
+        } else if (action === 'edit') {
+          const item = products.find(p => p.id === id);
+          if (!item) return;
+          editIdInput.value = item.id;
+          document.getElementById('prodName').value = item.name;
+          document.getElementById('prodCategory').value = item.category;
+          document.getElementById('prodPrice').value = item.price;
+          document.getElementById('prodDesc').value = item.description;
+          cancelEditBtn.style.display = 'inline-flex';
+          document.getElementById('saveProdBtn').textContent = 'Atualizar Produto';
+          productForm.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+
+      // Exportar JSON & Restaurar Padrão
+      document.getElementById('exportJsonBtn').addEventListener('click', () => {
+        const blob = new Blob([JSON.stringify(products, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'catalogo-nexo-forms.json';
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+
+      document.getElementById('resetDemoBtn').addEventListener('click', () => {
+        if (confirm('Restaurar os 6 itens de exemplo iniciais?')) {
+          products = [...DEFAULT_PRODUCTS];
+          saveProducts();
+          renderCatalog();
+          renderAdminList();
+        }
+      });
+
+      // Inicialização
+      renderCatalog();
+    })();
+  </script>
+</body>
+</html>
